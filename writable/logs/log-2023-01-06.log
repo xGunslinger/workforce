@@ -1,0 +1,132 @@
+ERROR - 2023-01-06 10:35:25 --> Error connecting to the database: ErrorException: Uninitialized string offset 0 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:82
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized s...', 'D:\\Program File...', 82)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\Program Files\xampp\htdocs\workforce\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rok.pozar@workf...', 'email', Array, NULL, 'email')
+#6 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rok.pozar@workf...', Array, Array)
+#7 D:\Program Files\xampp\htdocs\workforce\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 D:\Program Files\xampp\htdocs\workforce\app\Controllers\SignupController.php(27): CodeIgniter\Controller->validate(Array)
+#9 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-01-06 10:35:25 --> Unable to connect to the database.
+Main connection [MySQLi]: Uninitialized string offset 0
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rok.pozar@workforce.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rok.pozar@workforce.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-06 10:37:29 --> Error connecting to the database: ErrorException: Uninitialized string offset 0 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:82
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized s...', 'D:\\Program File...', 82)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\Program Files\xampp\htdocs\workforce\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rokpozar@workfo...', 'email', Array, NULL, 'email')
+#6 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rokpozar@workfo...', Array, Array)
+#7 D:\Program Files\xampp\htdocs\workforce\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 D:\Program Files\xampp\htdocs\workforce\app\Controllers\SignupController.php(27): CodeIgniter\Controller->validate(Array)
+#9 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-01-06 10:37:29 --> Unable to connect to the database.
+Main connection [MySQLi]: Uninitialized string offset 0
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rokpozar@workforce.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rokpozar@workforce.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-06 10:38:03 --> Error connecting to the database: ErrorException: Uninitialized string offset 0 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:82
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized s...', 'D:\\Program File...', 82)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\Program Files\xampp\htdocs\workforce\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rokpozar@workfo...', 'email', Array, NULL, 'email')
+#6 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rokpozar@workfo...', Array, Array)
+#7 D:\Program Files\xampp\htdocs\workforce\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 D:\Program Files\xampp\htdocs\workforce\app\Controllers\SignupController.php(27): CodeIgniter\Controller->validate(Array)
+#9 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-01-06 10:38:03 --> Unable to connect to the database.
+Main connection [MySQLi]: Uninitialized string offset 0
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rokpozar@workforce.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rokpozar@workforce.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-06 10:38:39 --> Error connecting to the database: ErrorException: Uninitialized string offset 0 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:82
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(82): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Uninitialized s...', 'D:\\Program File...', 82)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(382): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+#3 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1\nFROM `...', Array, false)
+#4 D:\Program Files\xampp\htdocs\workforce\system\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+#5 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rokpozar@workfo...', 'email', Array, NULL, 'email')
+#6 D:\Program Files\xampp\htdocs\workforce\system\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rokpozar@workfo...', Array, Array)
+#7 D:\Program Files\xampp\htdocs\workforce\system\Controller.php(140): CodeIgniter\Validation\Validation->run()
+#8 D:\Program Files\xampp\htdocs\workforce\app\Controllers\SignupController.php(27): CodeIgniter\Controller->validate(Array)
+#9 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\SignupController->store()
+#10 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+#11 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-01-06 10:38:39 --> Unable to connect to the database.
+Main connection [MySQLi]: Uninitialized string offset 0
+in SYSTEMPATH\Database\BaseConnection.php on line 418.
+ 1 SYSTEMPATH\Database\BaseConnection.php(561): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT 1
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Validation\Rules.php(142): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\Validation\Validation.php(315): CodeIgniter\Validation\Rules->is_unique('rokpozar@workforce.com', 'email', [...], null, 'email')
+ 5 SYSTEMPATH\Validation\Validation.php(175): CodeIgniter\Validation\Validation->processRules('email', 'email', 'rokpozar@workforce.com', [...], [...])
+ 6 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 7 APPPATH\Controllers\SignupController.php(27): CodeIgniter\Controller->validate([...])
+ 8 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\SignupController->store()
+ 9 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\SignupController))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
