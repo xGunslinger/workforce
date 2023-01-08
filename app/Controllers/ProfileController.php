@@ -6,7 +6,9 @@ class ProfileController extends Controller
 {
     public function index()
     {
-        $session = session();
-        echo "Welcome, ".$session->get('name') . ", are you ready to work?";
+        helper(['form']);
+        echo view('profile');
+//        $session = session();
+//        echo "Welcome, ".$session->get('name') . ", are you ready to work?";
     }
 }
