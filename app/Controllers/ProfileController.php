@@ -7,6 +7,6 @@ class ProfileController extends Controller
     public function index()
     {
         $session = session();
-        echo "Hello : ".$session->get('name');
+        echo "Welcome, ".$session->get('name') . ", are you ready to work?";
     }
 }

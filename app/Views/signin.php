@@ -25,13 +25,15 @@
                 <div class="form-group mb-3">
                     <input type="password" name="password" placeholder="Password" class="form-control" >
                 </div>
-
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-success">Signin</button>
+                    <button type="submit" class="btn btn-primary">Signin</button>
                 </div>
+<!--                <br/> -->
+<!--                <div class="d-grid" >-->
+<!--                    <a class="btn btn-success" href = "https://www.youtube.com/watch?v=5wY6SyKBi5U&ab_channel=m00nsterz">Войти в камеру</a>-->
+<!--                </div>-->
             </form>
         </div>
-
     </div>
 </div>
 </body>
