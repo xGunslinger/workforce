@@ -42,4 +42,13 @@ class SigninController extends Controller
             return redirect()->to('/signin');
         }
     }
+
+//    // logout
+//    public function logout()
+//    {
+//        //removing session
+//        $session = session();
+//        $session->unset_userdata('name');
+//        return redirect()->to('/signin');
+//    }
 }

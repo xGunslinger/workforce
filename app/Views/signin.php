@@ -4,15 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <title>Codeigniter Login with Email/Password Example</title>
+    <title>Workforce</title>
 </head>
 <body>
-<div class="container">
+<div class="container mt-5">
     <div class="row justify-content-md-center">
         <div class="col-5">
-
             <h2>Login in</h2>
-
             <?php if(session()->getFlashdata('msg')):?>
                 <div class="alert alert-warning">
                     <?= session()->getFlashdata('msg') ?>
@@ -26,7 +24,7 @@
                     <input type="password" name="password" placeholder="Password" class="form-control" >
                 </div>
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">Signin</button>
+                    <button type="submit" class="btn btn-primary">SignIn</button>
                 </div>
 <!--                <br/> -->
 <!--                <div class="d-grid" >-->

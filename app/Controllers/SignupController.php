@@ -14,8 +14,6 @@ class SignupController extends Controller
 
     public function store()
     {
-       // return redirect()->to('/signin');
-
         helper(['form']);
         $rules = [
             'name'          => 'required|min_length[2]|max_length[50]',
@@ -39,6 +37,5 @@ class SignupController extends Controller
         }
 
     }
-
 }
 
