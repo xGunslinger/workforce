@@ -2,6 +2,7 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+use Config\Database;
 
 class SigninController extends Controller
 {
@@ -27,12 +28,13 @@ class SigninController extends Controller
                 $ses_data = [
                     'id' => $data['id'],
                     'name' => $data['name'],
+                    'surname' => $data['surname'],
                     'email' => $data['email'],
                     'isLoggedIn' => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/profile');
 
+                return redirect()->to('/profile');
             }else{
                 $session->setFlashdata('msg', 'Password is incorrect.');
                 return redirect()->to('/signin');
@@ -45,9 +47,9 @@ class SigninController extends Controller
 
     // logout
     public function logout()
-    {
-        $session = session();
-        $session->unset_userdata('name');
-        return redirect()->to('/signin');
-    }
+{
+    $session = session();
+    $session->unset_userdata('name');
+    return redirect()->to('/signin');
+}
 }

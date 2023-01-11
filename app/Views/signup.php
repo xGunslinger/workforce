@@ -22,6 +22,9 @@
                         <input type="text" name="name" placeholder="Name" value="<?= set_value('name') ?>" class="form-control" >
                     </div>
                     <div class="form-group mb-3">
+                        <input type="text" name="surname" placeholder="Surname" value="<?= set_value('surname') ?>" class="form-control" >
+                    </div>
+                    <div class="form-group mb-3">
                         <input type="email" name="email" placeholder="Email" value="<?= set_value('email') ?>" class="form-control" >
                     </div>
                     <div class="form-group mb-3">

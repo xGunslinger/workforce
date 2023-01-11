@@ -7,6 +7,7 @@ class UserModel extends Model{
 
     protected $allowedFields = [
         'name',
+        'surname',
         'email',
         'password',
         'created_at'
