@@ -113,7 +113,7 @@
             margin: 0;
             overflow: hidden;
             padding: 0;
-            text-align: left;
+            text-align: center;
         }
         header .status li {
             display: inline-block;
@@ -180,7 +180,7 @@
     <section>
         <h1>Welcome back, <?php echo $row->name;?>!</h1>
         <h2>Position: <?php echo $row->position; ?></h2>
-        <h2>Current status: ВСТАВИТЬ СТАТУС ИЗ БД </h2>
+        <h2>Current status: <?php echo $row->status; ?> </h2>
         <p>У нас было два пакетика травы, семьдесят пять ампул мескалина, 5 пакетиков диэтиламида лизергиновой кислоты или ЛСД, </p>
         <p> солонка, наполовину наполненная кокаином, и целое море разноцветных амфетаминов, барбитуратов и транквилизаторов, </p>
         <p>а так же литр текилы, литр рома, ящик «Бадвайзера», пинта чистого эфира, и 12 пузырьков амилнитрита. </p>
