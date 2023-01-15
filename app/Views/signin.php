@@ -24,7 +24,7 @@
                     <input type="password" name="password" placeholder="Password" class="form-control" >
                 </div>
                 <div class="d-grid">
-                    <button type="submit" class="btn btn-primary">SignIn</button>
+                    <button type="submit" class="btn btn-primary">Sign In</button>
                 </div>
             </form>
         </div>

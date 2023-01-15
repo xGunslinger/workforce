@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
     <title>Workforce</title>
 <!--    /*********************************************************/-->
     <!-- STYLES -->
@@ -180,7 +181,7 @@
     <section>
         <h1>Welcome back, <?php echo $row->name;?>!</h1>
         <h2>Position: <?php echo $row->position; ?></h2>
-        <h2>Current status: <?php echo $row->status; ?> </h2>
+        <h2>Current status: <?php echo $row->status; ?></h2>
         <p>У нас было два пакетика травы, семьдесят пять ампул мескалина, 5 пакетиков диэтиламида лизергиновой кислоты или ЛСД, </p>
         <p> солонка, наполовину наполненная кокаином, и целое море разноцветных амфетаминов, барбитуратов и транквилизаторов, </p>
         <p>а так же литр текилы, литр рома, ящик «Бадвайзера», пинта чистого эфира, и 12 пузырьков амилнитрита. </p>
@@ -192,9 +193,15 @@
 <header>
 <div class="status">
     <ul>
-        <li class="status-item hidden"><a href="#">Online</a></li>
-        <li class="status-item hidden"><a href="#">Break</a></li>
-        <li class="status-item hidden"><a href="#">Offline</a></li>
+        <form action="<?php echo base_url(); ?>/ProfileController/online" method="post">
+        <button type="submit" class="btn btn-success">Online</button>
+        </form>
+        <form action="<?php echo base_url(); ?>/ProfileController/break" method="post">
+            <button type="submit" class="btn btn-success">Break</button>
+        </form>
+        <form action="<?php echo base_url(); ?>/ProfileController/offline" method="post">
+            <button type="submit" class="btn btn-success">Offline</button>
+        </form>
 </div>
     </header>
 <!--    /*********************************************************/-->

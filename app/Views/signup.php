@@ -17,7 +17,6 @@
                 </div>
                 <?php endif;?>
                 <form action="<?php echo base_url('SignupController/store') ?> " method="post">
-<!--                    <form action="/SignupController/store" method="post">-->
                     <div class="form-group mb-3">
                         <input type="text" name="name" placeholder="Name" value="<?= set_value('name') ?>" class="form-control" >
                     </div>
@@ -34,7 +33,7 @@
                         <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control" >
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-dark">SignUp</button>
+                        <button S class="btn btn-dark">SignUp</button>
                     </div>
             </div>
         </div>
