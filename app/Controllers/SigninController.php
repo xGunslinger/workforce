@@ -2,7 +2,6 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
-use Config\Database;
 
 class SigninController extends Controller
 {
@@ -44,10 +43,7 @@ class SigninController extends Controller
             return redirect()->to('/signin');
         }
     }
-
-    // logout
-    public function logout()
-{
+    public function logout(){
     $session = session();
     $session->unset_userdata('name');
     return redirect()->to('/signin');

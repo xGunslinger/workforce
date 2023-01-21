@@ -1,6 +1,16 @@
 <?php
-
+namespace App\Models;
 use CodeIgniter\Model;
 
 class RequestModel extends Model{
-    protected $table = 'requests';}
+    protected $table = 'requests';
+    protected $allowedFields = [
+        'user_id',
+        'employee_email',
+        'title',
+        'description',
+        'status',
+        'created_at',
+        'updated_at'
+    ];
+}

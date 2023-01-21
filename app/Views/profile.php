@@ -32,7 +32,7 @@
             padding: .4rem 2rem;
         }
         header ul {
-            border-bottom: 1px solid rgba(242, 242, 242, 1);
+            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
             list-style-type: none;
             margin: 0;
             overflow: hidden;
@@ -104,42 +104,38 @@
         /* STATUS STYLE */
         .status {
             background-color: rgba(247, 248, 249, 1);
-            border-bottom: 1px solid rgba(242, 242, 242, 1);
-            border-top: 1px solid rgba(242, 242, 242, 1);
+            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
+            /*border-top: 1px solid rgba(242, 242, 242, 1);*/
             padding: .4rem 2rem;
         }
         header .status ul {
-            border-bottom: 1px solid rgba(242, 242, 242, 1);
+            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
             list-style-type: none;
             margin: 0;
             overflow: hidden;
             padding: 0;
             text-align: center;
         }
-        header .status li {
+        header .status form {
             display: inline-block;
         }
-        header .status li a {
-            border-radius: 5px;
+        header form.status-item button {
             color: rgba(0, 0, 0, .5);
-            display: block;
-            height: 44px;
-            text-decoration: none;
-        }
-        header li.status-item a {
             border-radius: 5px;
+            border: none;
+            background-color: rgba(247, 248, 249, 1);
             margin: 5px 0;
             height: 38px;
-            line-height: 36px;
+            font-family: inherit;
+            font-size: 16px;
+            line-height: 24px;
             padding: .4rem .65rem;
-            text-align: center;
         }
-        header li.status-item a:hover,
-        header li.status-item a:focus {
+        header form.status-item button:hover,
+        header form.status-item button:focus {
             background-color: rgba(221, 72, 20, .2);
             color: rgba(221, 72, 20, 1);
         }
-
         /*********************************************************/
         /*FOOTER STYLE */
         footer {
@@ -166,9 +162,9 @@
     <div class="menu">
         <ul>
             <li class="menu-toggle"><button onclick="toggleMenu();">&#9776;</button></li>
-            <li class="menu-item hidden"><a href="#">Workforce</a></li>
+            <li class="menu-item hidden"><a href="<?php echo base_url('/profile')?>">Workforce</a></li>
             <li class="menu-item hidden"><a href="#">Schedule</a></li>
-            <li class="menu-item hidden"><a href="#">Requests</a></li>
+            <li class="menu-item hidden"><a href="<?php echo base_url('/request')?>">Requests</a></li>
             <li class="menu-item hidden"><a href="#">Notifications</a></li>
             <li class="menu-item hidden"><a href="#">Working Hours</a></li>
             <li class="menu-item hidden"><a href="<?php echo base_url('/') ?>">Log Out</a></li>
@@ -193,15 +189,12 @@
 <header>
 <div class="status">
     <ul>
-        <form action="<?php echo base_url(); ?>/ProfileController/online" method="post">
-        <button type="submit" class="btn btn-success">Online</button>
-        </form>
-        <form action="<?php echo base_url(); ?>/ProfileController/break" method="post">
-            <button type="submit" class="btn btn-success">Break</button>
-        </form>
-        <form action="<?php echo base_url(); ?>/ProfileController/offline" method="post">
-            <button type="submit" class="btn btn-success">Offline</button>
-        </form>
+        <form action="<?php echo base_url(); ?>/ProfileController/online" method="post" class="status-item">
+        <button>Online</button></form>
+        <form action="<?php echo base_url(); ?>/ProfileController/break" method="post" class="status-item">
+            <button>Break</button></form>
+        <form action="<?php echo base_url(); ?>/ProfileController/offline" method="post" class="status-item">
+            <button>Offline</button></form>
 </div>
     </header>
 <!--    /*********************************************************/-->
