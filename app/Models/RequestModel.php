@@ -4,6 +4,7 @@ use CodeIgniter\Model;
 
 class RequestModel extends Model{
     protected $table = 'requests';
+    protected $primaryKey = 'id';
     protected $allowedFields = [
         'user_id',
         'employee_email',

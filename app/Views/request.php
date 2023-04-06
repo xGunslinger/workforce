@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Workforce</title>
+
     <style {csp-style-nonce}>
         * {
             transition: background-color 300ms ease, color 300ms ease;
@@ -25,20 +26,17 @@
         }
         header {
             background-color: rgba(247, 248, 249, 1);
-            padding: .4rem 0 0;
+            padding: .4rem 0 .4rem;
         }
         .menu {
             padding: .4rem 2rem;
         }
         header ul {
-            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
-            /*list-style-type: none;*/
-            /*margin: 0;*/
-            /*padding: 0;*/
+            list-style-type: none;
+            margin: 0;
             overflow: hidden;
-            text-align: right;
-            margin top: 0;
             padding: 0;
+            text-align: right;
         }
         header li {
             display: inline-block;
@@ -52,9 +50,6 @@
         }
         header li.menu-item a {
             border-radius: 5px;
-            /* БИРЮЗОВЫЙ ЦВЕТ ФОНА
-            НАДО ПОМЕНЯТЬ ПОЛОЖЕНИЕ ТЕКСТА*/
-            background: #2aa198;
             margin: 5px 0;
             height: 38px;
             line-height: 36px;
@@ -100,7 +95,7 @@
             background-color: rgba(247, 248, 249, 1);
             /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
             /*border-top: 1px solid rgba(242, 242, 242, 1);*/
-            padding: 1rem 1.75rem;
+            padding: 2rem;
         }
         /*********************************************************/
         /*FOOTER STYLE */
@@ -141,23 +136,24 @@
 <!--    /*********************************************************/-->
     <!-- REQUEST FORM -->
 <section>
-<div class="container mt-5">
+<div class="container mt-3">
     <div class="row justify-content-md-center">
         <div class="col-5">
             <h2>Request</h2>
-            <form action="<?php echo base_url(); ?>/RequestController/request" method="post">
-                <div class="form-group mb-5">
-                    <input type="text" name="supervisor" placeholder="Supervisor" value="<?= set_value('supervisor') ?>" class="form-control" >
+            <form action="<?php echo base_url('RequestController/request') ?>" method="post">
+                <div class="form-group mb-3">
+                    <input type="text" name="employee_email" placeholder="Supervisor" value="<?= set_value('employee_email') ?>" class="form-control" >
                 </div>
                 <div class="form-group mb-5">
                     <input type="text" name="title" placeholder="Title" value="<?= set_value('title') ?>" class="form-control" >
                 </div>
-                <div class="form-group mb-5">
-                    <input type="text" name="description" placeholder="Description" value="<?= set_value('description') ?>" class="form-control" >
+                <div class="form-group mb-3">
+                    <textarea name="description" placeholder="Description" value="<?= set_value('description') ?>" class="form-control"></textarea>
                 </div>
                 <div class="d-grid">
                     <button type="submit" class="btn btn-dark">Send</button>
                 </div>
+            </form>
         </div>
     </div>
 </div>
@@ -166,7 +162,6 @@
 
 <header>
     <div class="line">
-
     </div>
         </header>
 

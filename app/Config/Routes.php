@@ -47,7 +47,7 @@ $routes->post('ProfileController/offline', 'ProfileController::offline');
 
 // request routes
 $routes->get('/request', 'RequestController::index', ['filter' => 'authGuard']);
-$routes->match(['get', 'post'], 'RequestController/request', 'RequestController::request');
+$routes->post('RequestController/request', 'RequestController::request');
 // rok.pozar@workforce.com
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
