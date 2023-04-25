@@ -2,13 +2,24 @@
 namespace App\Controllers;
 use App\Models\RequestModel;
 use CodeIgniter\Controller;
+use Config\Database;
 
 class RequestController extends Controller
 {
     public function index()
     {
         helper(['form']);
-        echo view('request');
+        $session = session();
+        // connect to database to read the data from the requests table
+        $database = Database::connect();
+
+        // get all new requests
+        $sql = 'SELECT * FROM requests WHERE employee_email=?';
+        $query = $database->query($sql, [$session->get('email')]);
+        $row = $query->getResult();
+        // get it and pass to view page
+        $request["rows"] = $row;
+        echo view('/request', $request);
     }
 
     public function request()
@@ -19,7 +30,7 @@ class RequestController extends Controller
             'title' => 'required|min_length[2]|max_length[30]',
             'description' => 'required|min_length[4]|max_length[100]',
         ];
-
+// добавить получение имени + имя в бд и в модельке
         if ($this->validate($rules)) {
             $session = session();
             $requestModel = new RequestModel();
@@ -31,10 +42,14 @@ class RequestController extends Controller
             ];
             $requestModel->save($data);
             return redirect()->to('/profile');
-
         } else {
             $data['validation'] = $this->validator;
             echo view('request', $data);
 }
+    }
+
+//    ВОТ ТУТ РАЗОБРАТЬСЯ СО СТРОКАМИ
+    public function getReceivedRequests(){
+
     }
 }

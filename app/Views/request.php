@@ -137,14 +137,43 @@
     <!-- REQUEST FORM -->
 <section>
 <div class="container mt-3">
-    <div class="row justify-content-md-center">
+    <div class="row">
         <div class="col-5">
-            <h2>Request</h2>
+            <h2>New Requests</h2>
+<!--                    /*********************************************************/       -->
+<!--                METHOD GET, SHOWS ALL RECEIVED REQUESTS, TITLE, NAME, DATETIME-->
+
+            <form action="<?php echo base_url('RequestController/request') ?>" method="get">
+                <div class="form-group mb-3">
+                    <input type="text" name="title" placeholder="Title Name Date Time" value="<?= set_value('employee_email') ?>" class="form-control" >
+                    <?php foreach ($rows as $row):?>
+                        <li><?php echo $row->user_id;?></li>
+                        <li><?php echo $row->title;?></li>
+                        <li><?php echo $row->description;?></li>
+                        <li><?php echo $row->creation_date;?></li>
+                    <?php endforeach;?>
+                </div>
+            </form>
+
+            <!--                    /*********************************************************/       -->
+            <!--                METHOD GET, SHOWS ALL SENT REQUESTS, TITLE, NAME, DATETIME-->
+
+            <h2>Sent Requests</h2>
+            <form action="<?php echo base_url('RequestController/request') ?>" method="post">
+                <div class="form-group mb-3">
+                    <input type="text" name="title" placeholder="Title Name Date Time" value="<?= set_value('employee_email') ?>" class="form-control" >
+                </div>
+            </form>
+            </form>
+        </div>
+
+        <div class="col-5">
+            <h2>Create Request</h2>
             <form action="<?php echo base_url('RequestController/request') ?>" method="post">
                 <div class="form-group mb-3">
                     <input type="text" name="employee_email" placeholder="Supervisor" value="<?= set_value('employee_email') ?>" class="form-control" >
                 </div>
-                <div class="form-group mb-5">
+                <div class="form-group mb-3">
                     <input type="text" name="title" placeholder="Title" value="<?= set_value('title') ?>" class="form-control" >
                 </div>
                 <div class="form-group mb-3">
@@ -156,7 +185,8 @@
             </form>
         </div>
     </div>
-</div>
+
+
 </section>
 
 

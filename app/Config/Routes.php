@@ -38,6 +38,7 @@ $routes->get('/signup', 'SignupController::index');
 $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::store');
 $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
 $routes->get('/signin', 'SigninController::index');
+
 $routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
 
 // status routes
@@ -46,8 +47,10 @@ $routes->post( 'ProfileController/break', 'ProfileController::break');
 $routes->post('ProfileController/offline', 'ProfileController::offline');
 
 // request routes
-$routes->get('/request', 'RequestController::index', ['filter' => 'authGuard']);
+//$routes->get('/request', 'RequestController::index', ['filter' => 'authGuard']);
 $routes->post('RequestController/request', 'RequestController::request');
+$routes->get( '/request', 'RequestController::index', ['filter' => 'authGuard']);
+
 // rok.pozar@workforce.com
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
