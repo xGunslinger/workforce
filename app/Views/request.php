@@ -86,17 +86,25 @@
             background-color: rgba(221, 72, 20, .8);
             color: rgba(255, 255, 255, .8);
         }
+
+        /*********************************************************/
+        /*SECTION STYLE */
         section {
             margin: 0 auto;
             max-width: 1100px;
             padding: 2.5rem 1.75rem 3.5rem 1.75rem;
         }
+      .list-group-item-action:hover
+        {
+            background-color: rgba(221, 72, 20, .2);
+            color: rgba(221, 72, 20, 1);
+        }
+
         header .line {
             background-color: rgba(247, 248, 249, 1);
-            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
-            /*border-top: 1px solid rgba(242, 242, 242, 1);*/
             padding: 2rem;
         }
+
         /*********************************************************/
         /*FOOTER STYLE */
         footer {
@@ -136,38 +144,49 @@
 <!--    /*********************************************************/-->
     <!-- REQUEST FORM -->
 <section>
-<div class="container mt-3">
+<div class="container">
     <div class="row">
         <div class="col-5">
+            <!--                    /*********************************************************/       -->
+            <!--                METHOD GET SHOWS ALL RECEIVED REQUESTS, TITLE, NAME, DATETIME-->
             <h2>New Requests</h2>
-<!--                    /*********************************************************/       -->
-<!--                METHOD GET, SHOWS ALL RECEIVED REQUESTS, TITLE, NAME, DATETIME-->
-
             <form action="<?php echo base_url('RequestController/request') ?>" method="get">
-                <div class="form-group mb-3">
-                    <input type="text" name="title" placeholder="Title Name Date Time" value="<?= set_value('employee_email') ?>" class="form-control" >
+                    <div class="mb-3">
+                                <?php foreach ($rows as $row):?>
+                        <div class="rounded-3 mb-1">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex justify-content-between">
+                                <h5 class="mb-1"><?php echo $row->title;?></h5>
+                                <small><?php echo $row->creation_date;?></small>
+                            </div>
+                            <p class="mb-1"><?php echo $row->description;?></p>
+                            <small><?php echo $row->user_id;?></small>
+                            </a>
+                        </div>
+                            <?php endforeach;?>
+                    </div>
+            </form>
+
+        <!--                    /*********************************************************/       -->
+        <!--                METHOD GET SHOWS ALL SENT REQUESTS, TITLE, NAME, DATETIME-->
+            <h2>Sent Requests</h2>
+            <form action="<?php echo base_url('RequestController/request') ?>" method="get">
+                <div class="mb-3">
                     <?php foreach ($rows as $row):?>
-                        <li><?php echo $row->user_id;?></li>
-                        <li><?php echo $row->title;?></li>
-                        <li><?php echo $row->description;?></li>
-                        <li><?php echo $row->creation_date;?></li>
+                        <div class="rounded-3 mb-1">
+                            <a href="#" class="list-group-item list-group-item-action">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="mb-1"><?php echo $row->title;?></h5>
+                                    <small><?php echo $row->creation_date;?></small>
+                                </div>
+                                <p class="mb-1"><?php echo $row->description;?></p>
+                                <small><?php echo $row->user_id;?></small>
+                            </a>
+                        </div>
                     <?php endforeach;?>
                 </div>
             </form>
 
-            <!--                    /*********************************************************/       -->
-            <!--                METHOD GET, SHOWS ALL SENT REQUESTS, TITLE, NAME, DATETIME-->
-
-            <h2>Sent Requests</h2>
-            <form action="<?php echo base_url('RequestController/request') ?>" method="post">
-                <div class="form-group mb-3">
-                    <input type="text" name="title" placeholder="Title Name Date Time" value="<?= set_value('employee_email') ?>" class="form-control" >
-                </div>
-            </form>
-            </form>
-        </div>
-
-        <div class="col-5">
             <h2>Create Request</h2>
             <form action="<?php echo base_url('RequestController/request') ?>" method="post">
                 <div class="form-group mb-3">
@@ -183,10 +202,9 @@
                     <button type="submit" class="btn btn-dark">Send</button>
                 </div>
             </form>
-        </div>
     </div>
-
-
+    </div>
+</div>
 </section>
 
 

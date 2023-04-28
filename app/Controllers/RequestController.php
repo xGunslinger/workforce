@@ -17,6 +17,7 @@ class RequestController extends Controller
         $sql = 'SELECT * FROM requests WHERE employee_email=?';
         $query = $database->query($sql, [$session->get('email')]);
         $row = $query->getResult();
+
         // get it and pass to view page
         $request["rows"] = $row;
         echo view('/request', $request);
@@ -36,6 +37,8 @@ class RequestController extends Controller
             $requestModel = new RequestModel();
             $data = [
                 'user_id' => $session->get('id'),
+                'sender_name' => $session->get('sender_name'),
+                'sender_surname' => $session->get('sender_surname'),
                 'employee_email' => $this->request->getVar('employee_email'),
                 'title' => $this->request->getVar('title'),
                 'description' => $this->request->getVar('description')
@@ -46,10 +49,5 @@ class RequestController extends Controller
             $data['validation'] = $this->validator;
             echo view('request', $data);
 }
-    }
-
-//    ВОТ ТУТ РАЗОБРАТЬСЯ СО СТРОКАМИ
-    public function getReceivedRequests(){
-
     }
 }
