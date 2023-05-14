@@ -47,9 +47,10 @@ $routes->post( 'ProfileController/break', 'ProfileController::break');
 $routes->post('ProfileController/offline', 'ProfileController::offline');
 
 // request routes
-//$routes->get('/request', 'RequestController::index', ['filter' => 'authGuard']);
 $routes->post('RequestController/request', 'RequestController::request');
 $routes->get( '/request', 'RequestController::index', ['filter' => 'authGuard']);
+$routes->post('RequestController/acceptRequest', 'RequestController::acceptRequest');
+$routes->post('RequestController/refuseRequest', 'RequestController::refuseRequest');
 
 // rok.pozar@workforce.com
 // We get a performance increase by specifying the default

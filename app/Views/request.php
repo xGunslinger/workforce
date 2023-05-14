@@ -6,6 +6,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Workforce</title>
 
+
+
     <style {csp-style-nonce}>
         * {
             transition: background-color 300ms ease, color 300ms ease;
@@ -94,7 +96,7 @@
             max-width: 1100px;
             padding: 2.5rem 1.75rem 3.5rem 1.75rem;
         }
-      .list-group-item-action:hover
+        .list-group-item-action:hover
         {
             background-color: rgba(221, 72, 20, .2);
             color: rgba(221, 72, 20, 1);
@@ -142,76 +144,88 @@
 </header>
 
 <!--    /*********************************************************/-->
-    <!-- REQUEST FORM -->
+<!-- REQUEST FORM -->
 <section>
-<div class="container">
-    <div class="row">
-        <div class="col-5">
-            <!--                    /*********************************************************/       -->
-            <!--                METHOD GET SHOWS ALL RECEIVED REQUESTS, TITLE, NAME, DATETIME-->
-            <h2>New Requests</h2>
-            <form action="<?php echo base_url('RequestController/request') ?>" method="get">
+    <div class="container">
+        <div class="row">
+            <!--do not display sent and new for employee-->
+            <?php if(session()->get('position') != 'Employee'){?>
+                <div class="col-6" id="requests">
+                    <!--                    /*********************************************************/       -->
+                    <!--                METHOD GET SHOWS ALL RECEIVED REQUESTS, TITLE, NAME, DATETIME-->
+                    <h2>New Requests</h2>
                     <div class="mb-3">
-                                <?php foreach ($rows as $row):?>
-                        <div class="rounded-3 mb-1">
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex justify-content-between">
-                                <h5 class="mb-1"><?php echo $row->title;?></h5>
-                                <small><?php echo $row->creation_date;?></small>
+                        <?php foreach ($rows as $row):?>
+                            <div class="rounded-3 mb-1">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="mb-1"><?php echo $row->title;?></h5>
+                                        <small><?php echo $row->creation_date;?></small>
+                                    </div>
+                                    <p class="mb-1"><?php echo $row->description;?></p>
+                                    <small><?php echo $row->sender_name ." " .$row->sender_surname;?></small>
+
+                                    <div class="d-flex justify-content-end">
+                                        <form action="<?php echo base_url();?>/RequestController/acceptRequest" method="post">
+                                            <input type="hidden" name="id" value="<?php echo $row->id; ?>">
+                                            <button type="submit" class="btn btn-success me-2">Accept</button>
+                                        </form>
+                                        <form action="<?php echo base_url(); ?>/RequestController/refuseRequest" method="post">
+                                            <input type="hidden" name="id" value="<?php echo $row->id; ?>">
+                                            <button type="submit" class="btn btn-danger">Refuse</button>
+                                        </form>
+                                    </div>
+                                </a>
                             </div>
-                            <p class="mb-1"><?php echo $row->description;?></p>
-                            <small><?php echo $row->user_id;?></small>
-                            </a>
-                        </div>
-                            <?php endforeach;?>
+                        <?php endforeach;?>
+                </div>
+                    <!--                    /*********************************************************/       -->
+                    <!--                METHOD GET SHOWS ALL SENT REQUESTS, TITLE, NAME, DATETIME-->
+                    <h2>Checked Requests</h2>
+                    <div class="mb-3">
+                        <?php foreach ($checked as $row):?>
+                            <div class="rounded-3 mb-1">
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex justify-content-between">
+                                        <h5 class="mb-1"><?php echo $row->title;?></h5>
+                                        <small><?php echo $row->creation_date;?></small>
+                                    </div>
+                                    <p class="mb-1"><?php echo $row->description;?></p>
+                                    <small><?php echo $row->sender_name ." " .$row->sender_surname ." " .$row->status ." at " .$row->updated_at;?></small>
+                                </a>
+                            </div>
+                        <?php endforeach;?>
                     </div>
-            </form>
+                </div>
+            <?php }?>
 
-        <!--                    /*********************************************************/       -->
-        <!--                METHOD GET SHOWS ALL SENT REQUESTS, TITLE, NAME, DATETIME-->
-            <h2>Sent Requests</h2>
-            <form action="<?php echo base_url('RequestController/request') ?>" method="get">
-                <div class="mb-3">
-                    <?php foreach ($rows as $row):?>
-                        <div class="rounded-3 mb-1">
-                            <a href="#" class="list-group-item list-group-item-action">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1"><?php echo $row->title;?></h5>
-                                    <small><?php echo $row->creation_date;?></small>
-                                </div>
-                                <p class="mb-1"><?php echo $row->description;?></p>
-                                <small><?php echo $row->user_id;?></small>
-                            </a>
-                        </div>
-                    <?php endforeach;?>
-                </div>
-            </form>
+            <div class="col-6">
+                <h2>Create Request</h2>
+                <form action="<?php echo base_url('RequestController/request') ?>" method="post">
+                    <div class="form-group mb-3">
+                        <input type="text" name="employee_email" placeholder="Supervisor" value="<?= set_value('employee_email') ?>" class="form-control" >
+                    </div>
+                    <div class="form-group mb-3">
+                        <input type="text" name="title" placeholder="Title" value="<?= set_value('title') ?>" class="form-control" >
+                    </div>
+                    <div class="form-group mb-3">
+                        <textarea name="description" placeholder="Description" value="<?= set_value('description') ?>" class="form-control"></textarea>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-dark">Send</button>
+                    </div>
+                </form>
+            </div>
 
-            <h2>Create Request</h2>
-            <form action="<?php echo base_url('RequestController/request') ?>" method="post">
-                <div class="form-group mb-3">
-                    <input type="text" name="employee_email" placeholder="Supervisor" value="<?= set_value('employee_email') ?>" class="form-control" >
-                </div>
-                <div class="form-group mb-3">
-                    <input type="text" name="title" placeholder="Title" value="<?= set_value('title') ?>" class="form-control" >
-                </div>
-                <div class="form-group mb-3">
-                    <textarea name="description" placeholder="Description" value="<?= set_value('description') ?>" class="form-control"></textarea>
-                </div>
-                <div class="d-grid">
-                    <button type="submit" class="btn btn-dark">Send</button>
-                </div>
-            </form>
+        </div>
     </div>
-    </div>
-</div>
 </section>
 
 
 <header>
     <div class="line">
     </div>
-        </header>
+</header>
 
 <!--FOOTER: DEBUG INFO + datetime-->
 <footer>

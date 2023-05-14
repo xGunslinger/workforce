@@ -14,12 +14,19 @@ class RequestController extends Controller
         $database = Database::connect();
 
         // get all new requests
-        $sql = 'SELECT * FROM requests WHERE employee_email=?';
-        $query = $database->query($sql, [$session->get('email')]);
+        $sql = 'SELECT * FROM requests WHERE employee_email=? AND status=?';
+        $query = $database->query($sql, [$session->get('email'), 'checking']);
         $row = $query->getResult();
 
         // get it and pass to view page
         $request["rows"] = $row;
+
+        // show checked requests
+        $sql = 'SELECT * FROM requests WHERE employee_email=? AND status!=?';
+        $query = $database->query($sql, [$session->get('email'), 'checking']);
+        $checked = $query->getResult();
+        $request["checked"] = $checked;
+
         echo view('/request', $request);
     }
 
@@ -31,14 +38,13 @@ class RequestController extends Controller
             'title' => 'required|min_length[2]|max_length[30]',
             'description' => 'required|min_length[4]|max_length[100]',
         ];
-// добавить получение имени + имя в бд и в модельке
         if ($this->validate($rules)) {
             $session = session();
             $requestModel = new RequestModel();
             $data = [
                 'user_id' => $session->get('id'),
-                'sender_name' => $session->get('sender_name'),
-                'sender_surname' => $session->get('sender_surname'),
+                'sender_name' => $session->get('name'),
+                'sender_surname' => $session->get('surname'),
                 'employee_email' => $this->request->getVar('employee_email'),
                 'title' => $this->request->getVar('title'),
                 'description' => $this->request->getVar('description')
@@ -48,6 +54,23 @@ class RequestController extends Controller
         } else {
             $data['validation'] = $this->validator;
             echo view('request', $data);
-}
+        }
+    }
+
+    public function acceptRequest()
+    {
+       $id = $this->request->getVar('id');
+        $database = Database::connect();
+        $sql = 'UPDATE requests SET status = ?, updated_at = Now() WHERE id=?';
+        $database->query($sql, ['accepted', $id]);
+        return redirect()->to('/request');
+    }
+    public function refuseRequest()
+    {
+        $id = $this->request->getVar('id');
+        $database = Database::connect();
+        $sql = 'UPDATE requests SET status = ?, updated_at = Now() WHERE id=?';
+        $database->query($sql, ['refused', $id]);
+        return redirect()->to('/request');
     }
 }
