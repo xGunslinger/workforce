@@ -136,7 +136,7 @@
             <li class="menu-item hidden"><a href="<?php echo base_url('/profile')?>">Workforce</a></li>
             <li class="menu-item hidden"><a href="#">Schedule</a></li>
             <li class="menu-item hidden"><a href="<?php echo base_url('/request')?>">Requests</a></li>
-            <li class="menu-item hidden"><a href="#">Notifications</a></li>
+            <li class="menu-item hidden"><a href="<?php echo base_url('/notification')?>">Notifications</a></li>
             <li class="menu-item hidden"><a href="#">Working Hours</a></li>
             <li class="menu-item hidden"><a href="<?php echo base_url('/') ?>">Log Out</a></li>
         </ul>
@@ -157,7 +157,7 @@
                     <div class="mb-3">
                         <?php foreach ($rows as $row):?>
                             <div class="rounded-3 mb-1">
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a class="list-group-item list-group-item-action">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="mb-1"><?php echo $row->title;?></h5>
                                         <small><?php echo $row->creation_date;?></small>
@@ -185,7 +185,7 @@
                     <div class="mb-3">
                         <?php foreach ($checked as $row):?>
                             <div class="rounded-3 mb-1">
-                                <a href="#" class="list-group-item list-group-item-action">
+                                <a class="list-group-item list-group-item-action">
                                     <div class="d-flex justify-content-between">
                                         <h5 class="mb-1"><?php echo $row->title;?></h5>
                                         <small><?php echo $row->creation_date;?></small>

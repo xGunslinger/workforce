@@ -52,6 +52,10 @@ $routes->get( '/request', 'RequestController::index', ['filter' => 'authGuard'])
 $routes->post('RequestController/acceptRequest', 'RequestController::acceptRequest');
 $routes->post('RequestController/refuseRequest', 'RequestController::refuseRequest');
 
+// notification routes
+$routes->get('/notification', 'NotificationController::index');
+
+
 // rok.pozar@workforce.com
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
