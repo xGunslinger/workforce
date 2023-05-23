@@ -33,12 +33,12 @@ $routes->set404Override();
  * --------------------------------------------------------------------
  */
 $routes->get('/', 'Home::index');
-// $routes->get('/', 'SignupController::index');
 $routes->get('/signup', 'SignupController::index');
 $routes->match(['get', 'post'], 'SignupController/store', 'SignupController::store');
 $routes->match(['get', 'post'], 'SigninController/loginAuth', 'SigninController::loginAuth');
 $routes->get('/signin', 'SigninController::index');
 
+// profile routes
 $routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
 
 // status routes
@@ -55,6 +55,11 @@ $routes->post('RequestController/refuseRequest', 'RequestController::refuseReque
 // notification routes
 $routes->get('/notification', 'NotificationController::index');
 
+// schedule route
+$routes->get('/schedule', 'ScheduleController::index');
+
+// working hours route
+$routes->get('/working_hours', 'WorkingHoursController::index');
 
 // rok.pozar@workforce.com
 // We get a performance increase by specifying the default

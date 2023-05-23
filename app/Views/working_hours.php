@@ -2,9 +2,10 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-<!--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Workforce</title>
-<!--    /*********************************************************/-->
+
+    <!--    /*********************************************************/-->
     <!-- STYLES -->
     <style {csp-style-nonce}>
         * {
@@ -32,7 +33,6 @@
             padding: .4rem 2rem;
         }
         header ul {
-            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
             list-style-type: none;
             margin: 0;
             overflow: hidden;
@@ -92,50 +92,17 @@
             max-width: 1100px;
             padding: 2.5rem 1.75rem 3.5rem 1.75rem;
         }
-        section h1 {
-            margin-bottom: 2.5rem;
-        }
-        section h2 {
-            font-size: 120%;
-            line-height: 2.5rem;
-            padding-top: 1.5rem;
-        }
-        /*********************************************************/
-        /* STATUS STYLE */
-        .status {
-            background-color: rgba(247, 248, 249, 1);
-            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
-            /*border-top: 1px solid rgba(242, 242, 242, 1);*/
-            padding: .4rem 2rem;
-        }
-        header .status ul {
-            /*border-bottom: 1px solid rgba(242, 242, 242, 1);*/
-            list-style-type: none;
-            margin: 0;
-            overflow: hidden;
-            padding: 0;
-            text-align: center;
-        }
-        header .status form {
-            display: inline-block;
-        }
-        header form.status-item button {
-            color: rgba(0, 0, 0, .5);
-            border-radius: 5px;
-            border: none;
-            background-color: rgba(247, 248, 249, 1);
-            margin: 5px 0;
-            height: 38px;
-            font-family: inherit;
-            font-size: 16px;
-            line-height: 24px;
-            padding: .4rem .65rem;
-        }
-        header form.status-item button:hover,
-        header form.status-item button:focus {
+        .list-group-item-action:hover
+        {
             background-color: rgba(221, 72, 20, .2);
             color: rgba(221, 72, 20, 1);
         }
+
+        header .line {
+            background-color: rgba(247, 248, 249, 1);
+            padding: 2rem;
+        }
+
         /*********************************************************/
         /*FOOTER STYLE */
         footer {
@@ -158,7 +125,7 @@
 <header>
 
     <!--    /*********************************************************/-->
-<!--    MENU BUTTONS -->
+    <!--    MENU BUTTONS -->
     <div class="menu">
         <ul>
             <li class="menu-toggle"><button onclick="toggleMenu();">&#9776;</button></li>
@@ -174,29 +141,39 @@
 
 <!--    /*********************************************************/-->
 <!--    CONTENT -->
-    <section>
-        <h1>Welcome back, <?php echo $row->name;?>!</h1>
-        <h2>Position: <?php echo $row->position; ?></h2>
-        <h2>Current status: <?php echo $row->status; ?></h2>
-        <p>У нас было два пакетика травы, семьдесят пять ампул мескалина, 5 пакетиков диэтиламида лизергиновой кислоты или ЛСД, </p>
-        <p> солонка, наполовину наполненная кокаином, и целое море разноцветных амфетаминов, барбитуратов и транквилизаторов, </p>
-        <p>а так же литр текилы, литр рома, ящик «Бадвайзера», пинта чистого эфира, и 12 пузырьков амилнитрита. </p>
-        <p>Не то, чтобы всё это было категорически необходимо в поездке, но если уж начал собирать коллекцию, то к делу надо подходить серьёзно.</p>
-    </section>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h2>Working Hours</h2>
+                <p><?php echo $row->name;?> starts day at <?php echo $row->start_at;?></p>
+                <p><?php echo  date('H:i:s',time());?></p>
+                <p>Your per hour rate is <?php echo $row->per_hour_rate;?></p>
+                <div class="mb-3">
+                        <div class="rounded-3 mb-1">
+                            <a class="list-group-item list-group-item-action">
+                                <div class="d-flex justify-content-between">
+                                    <h5 class="mb-1">Today is <?php echo date('d/m/y');?></h5>
+                                </div>
+<!--                                ДОБАВИТЬ ПОДСЧЕТ ВРМЕНИ И ЗАРПЛАТЫ-->
+                                <p class="mb-1">Online: ...hours</p>
+                                <p class="mb-1">Break: ...mins</p>
+                                <p class="mb-1">Earned: ...$</p>
+<!--                                <p class="mb-1">--><?php //echo $row->description;?><!--</p>-->
+<!--                                <p class="mb-1">--><?php //echo $row->description;?><!--</p>-->
+<!--                                <p class="mb-1">--><?php //echo $row->description;?><!--</p>-->
+                            </a>
+                        </div>
+                </div>
+            </div>
 
-<!--    /*********************************************************/-->
-<!-- STATUS  -->
+</section>
+
 <header>
-<div class="status">
-    <ul>
-        <form action="<?php echo base_url(); ?>/ProfileController/online" method="post" class="status-item">
-        <button>Online</button></form>
-        <form action="<?php echo base_url(); ?>/ProfileController/break" method="post" class="status-item">
-            <button>Break</button></form>
-        <form action="<?php echo base_url(); ?>/ProfileController/offline" method="post" class="status-item">
-            <button>Offline</button></form>
-</div>
-    </header>
+    <div class="line">
+    </div>
+</header>
+
 <!--    /*********************************************************/-->
 <!--FOOTER: DEBUG INFO + datetime-->
 <footer>

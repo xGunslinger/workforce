@@ -3,8 +3,10 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use Config\Database;
 
+
 class ProfileController extends Controller
 {
+
 
     public function index()
     {
@@ -21,10 +23,12 @@ class ProfileController extends Controller
         echo view('/profile', $userdata);
     }
     public function online(){
+
         $session = session();
         $database = Database::connect();
-        $sql = 'UPDATE users SET status = ? WHERE id=?';
-        $database->query($sql, ['Online',$session->get('id')]);
+        $curr=date('H:i:s',time());
+        $sql = 'UPDATE users SET status = ?, start_at=? WHERE id=?';
+        $database->query($sql, ['Online', $curr, $session->get('id')]);
         return redirect()->to('/profile');
     }
     public function break(){
@@ -37,8 +41,9 @@ class ProfileController extends Controller
     public function offline(){
         $session = session();
         $database = Database::connect();
-        $sql = 'UPDATE users SET status = ? WHERE id=?';
-        $database->query($sql, ['Offline',$session->get('id')]);
+        $curr=date('H:i:s',time());
+        $sql = 'UPDATE users SET status =?, end_at=? WHERE id=?';
+        $database->query($sql, ['Offline',$curr, $session->get('id')]);
         return redirect()->to('/profile');
     }
 }

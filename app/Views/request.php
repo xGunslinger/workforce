@@ -134,10 +134,10 @@
         <ul>
             <li class="menu-toggle"><button onclick="toggleMenu();">&#9776;</button></li>
             <li class="menu-item hidden"><a href="<?php echo base_url('/profile')?>">Workforce</a></li>
-            <li class="menu-item hidden"><a href="#">Schedule</a></li>
+            <li class="menu-item hidden"><a href="<?php echo base_url('/schedule')?>">Schedule</a></li>
             <li class="menu-item hidden"><a href="<?php echo base_url('/request')?>">Requests</a></li>
             <li class="menu-item hidden"><a href="<?php echo base_url('/notification')?>">Notifications</a></li>
-            <li class="menu-item hidden"><a href="#">Working Hours</a></li>
+            <li class="menu-item hidden"><a href="<?php echo base_url('/working_hours')?>">Working Hours</a></li>
             <li class="menu-item hidden"><a href="<?php echo base_url('/') ?>">Log Out</a></li>
         </ul>
     </div>
@@ -148,7 +148,7 @@
 <section>
     <div class="container">
         <div class="row">
-            <!--do not display sent and new for employee-->
+            <!--do not display checked and new requests for employee-->
             <?php if(session()->get('position') != 'Employee'){?>
                 <div class="col-6" id="requests">
                     <!--                    /*********************************************************/       -->

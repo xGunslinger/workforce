@@ -10,7 +10,11 @@ class UserModel extends Model{
         'email',
         'password',
         'position',
-        'created_at'
+        'created_at',
+        'working_hours',
+        'per_hour_rate',
+        'start_at',
+        'end_at'
     ];
 }
 

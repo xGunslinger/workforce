@@ -1,6 +1,5 @@
 <?php
 namespace App\Controllers;
-use App\Models\RequestModel;
 use CodeIgniter\Controller;
 use Config\Database;
 

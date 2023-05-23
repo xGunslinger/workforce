@@ -2,6 +2,8 @@
 namespace App\Controllers;
 use CodeIgniter\Controller;
 use App\Models\UserModel;
+use App\Models\WorkingHoursModel;
+use Config\Database;
 
 class SignupController extends Controller
 {
