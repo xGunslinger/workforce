@@ -1,0 +1,340 @@
+CRITICAL - 2023-05-24 20:11:47 --> Undefined property: stdClass::$hours
+in APPPATH\Views\working_hours.php on line 160.
+ 1 APPPATH\Views\working_hours.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$hours', 'APPPATH\\Views\\working_hours.php', 160)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:12:08 --> A non-numeric value encountered
+in APPPATH\Controllers\ProfileController.php on line 47.
+ 1 APPPATH\Controllers\ProfileController.php(47): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\ProfileController.php', 47)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:12:44 --> Undefined property: stdClass::$hours
+in APPPATH\Views\working_hours.php on line 160.
+ 1 APPPATH\Views\working_hours.php(160): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$hours', 'APPPATH\\Views\\working_hours.php', 160)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:14:34 --> Call to undefined function App\Controllers\timespan()
+in APPPATH\Controllers\ProfileController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:14:45 --> Call to undefined function App\Controllers\timespan()
+in APPPATH\Controllers\ProfileController.php on line 50.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:15:13 --> Call to undefined function App\Controllers\timespan()
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:24:26 --> Array to string conversion
+in APPPATH\Controllers\ProfileController.php on line 56.
+ 1 APPPATH\Controllers\ProfileController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\ProfileController.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:24:48 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\ProfileController.php on line 56.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:26:01 --> Array to string conversion
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 APPPATH\Controllers\ProfileController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\ProfileController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:26:20 --> Array to string conversion
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 APPPATH\Controllers\ProfileController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\ProfileController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:27:05 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:27:33 --> Undefined array key 1
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 APPPATH\Controllers\ProfileController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\ProfileController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:27:43 --> Array to string conversion
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 APPPATH\Controllers\ProfileController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\ProfileController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:28:31 --> Undefined array key 11
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 APPPATH\Controllers\ProfileController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 11', 'APPPATH\\Controllers\\ProfileController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:28:41 --> Undefined array key 1
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 APPPATH\Controllers\ProfileController.php(57): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'APPPATH\\Controllers\\ProfileController.php', 57)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:28:49 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:28:57 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\ProfileController.php on line 57.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:31:00 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\ProfileController.php on line 58.
+ 1 APPPATH\Controllers\ProfileController.php(58): implode(',', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:31:07 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\ProfileController.php on line 58.
+ 1 APPPATH\Controllers\ProfileController.php(58): implode(',', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:32:02 --> Object of class stdClass could not be converted to string
+in APPPATH\Controllers\ProfileController.php on line 58.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:32:12 --> Array to string conversion
+in APPPATH\Controllers\ProfileController.php on line 58.
+ 1 APPPATH\Controllers\ProfileController.php(58): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Controllers\\ProfileController.php', 58)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:32:39 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::get()
+in APPPATH\Controllers\ProfileController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:32:55 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Controllers\ProfileController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:33:47 --> Call to undefined method CodeIgniter\Database\MySQLi\Result::result()
+in APPPATH\Controllers\ProfileController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-24 20:34:42 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name FRO...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FRO...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FRO...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(50): CodeIgniter\Database\BaseConnection->query('SELECT name FRO...', NULL)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-24 20:34:42 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name FROM users WHERE id=?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name FROM users WHERE id=?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name FROM users WHERE id=?')
+ 4 APPPATH\Controllers\ProfileController.php(50): CodeIgniter\Database\BaseConnection->query('SELECT name FROM users WHERE id=?', null)
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:37:35 --> json_decode(): Argument #1 ($json) must be of type string, array given
+in APPPATH\Controllers\ProfileController.php on line 58.
+ 1 APPPATH\Controllers\ProfileController.php(58): json_decode([...])
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:41:07 --> Attempt to read property "start_at" on array
+in APPPATH\Controllers\ProfileController.php on line 56.
+ 1 APPPATH\Controllers\ProfileController.php(56): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "start_at" on array', 'APPPATH\\Controllers\\ProfileController.php', 56)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:43:03 --> A non-numeric value encountered
+in APPPATH\Controllers\ProfileController.php on line 53.
+ 1 APPPATH\Controllers\ProfileController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\ProfileController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:43:41 --> A non-numeric value encountered
+in APPPATH\Controllers\ProfileController.php on line 53.
+ 1 APPPATH\Controllers\ProfileController.php(53): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Controllers\\ProfileController.php', 53)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:44:31 --> Call to undefined function App\Controllers\timespan()
+in APPPATH\Controllers\ProfileController.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:48:37 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\ProfileController.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:49:18 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:49:34 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:49:44 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:49:47 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:50:25 --> Call to a member function difference() on string
+in APPPATH\Controllers\ProfileController.php on line 55.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:51:15 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\ProfileController.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 20:51:45 --> Class "App\Controllers\Time" not found
+in APPPATH\Controllers\ProfileController.php on line 53.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 21:05:25 --> Call to undefined function App\Controllers\humanize()
+in APPPATH\Controllers\ProfileController.php on line 65.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 21:14:02 --> Undefined property: stdClass::$hours
+in APPPATH\Views\working_hours.php on line 162.
+ 1 APPPATH\Views\working_hours.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$hours', 'APPPATH\\Views\\working_hours.php', 162)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 21:14:24 --> Undefined property: stdClass::$hours
+in APPPATH\Views\working_hours.php on line 162.
+ 1 APPPATH\Views\working_hours.php(162): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: stdClass::$hours', 'APPPATH\\Views\\working_hours.php', 162)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 21:18:50 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Views\working_hours.php on line 160.
+ 1 APPPATH\Views\working_hours.php(160): date('h', '01:48:04')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 21:19:07 --> date(): Argument #2 ($timestamp) must be of type ?int, string given
+in APPPATH\Views\working_hours.php on line 160.
+ 1 APPPATH\Views\working_hours.php(160): date('h', '01:48:04')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 21:25:52 --> A non-numeric value encountered
+in APPPATH\Views\working_hours.php on line 161.
+ 1 APPPATH\Views\working_hours.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\working_hours.php', 161)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-24 21:26:18 --> A non-numeric value encountered
+in APPPATH\Views\working_hours.php on line 161.
+ 1 APPPATH\Views\working_hours.php(161): CodeIgniter\Debug\Exceptions->errorHandler(2, 'A non-numeric value encountered', 'APPPATH\\Views\\working_hours.php', 161)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

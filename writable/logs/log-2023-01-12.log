@@ -1,0 +1,119 @@
+CRITICAL - 2023-01-12 09:13:39 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::select()
+in APPPATH\Controllers\ProfileController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 09:22:25 --> Undefined variable $query
+in APPPATH\Controllers\ProfileController.php on line 18.
+ 1 APPPATH\Controllers\ProfileController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\ProfileController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 09:24:14 --> Cannot use object of type CodeIgniter\Session\Session as array
+in APPPATH\Controllers\ProfileController.php on line 17.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 09:25:59 --> Undefined variable $query
+in APPPATH\Controllers\ProfileController.php on line 18.
+ 1 APPPATH\Controllers\ProfileController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\ProfileController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 09:26:12 --> Undefined variable $query
+in APPPATH\Controllers\ProfileController.php on line 18.
+ 1 APPPATH\Controllers\ProfileController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\ProfileController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 09:27:26 --> Undefined variable $query
+in APPPATH\Controllers\ProfileController.php on line 18.
+ 1 APPPATH\Controllers\ProfileController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\ProfileController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 09:27:39 --> Undefined variable $query
+in APPPATH\Controllers\ProfileController.php on line 18.
+ 1 APPPATH\Controllers\ProfileController.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $query', 'APPPATH\\Controllers\\ProfileController.php', 18)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-12 09:31:07 --> syntax error, unexpected identifier "id", expecting ")"
+in APPPATH\Controllers\ProfileController.php on line 14.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(259): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\ProfileController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(237): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\ProfileController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\ProfileController')
+ 4 SYSTEMPATH\CodeIgniter.php(877): class_exists('\\App\\Controllers\\ProfileController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(469): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-12 09:31:51 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[$session->get(id)]' at line 1 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, po...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, po...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, po...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, po...')
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-01-12 09:31:51 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[$session->get(id)]' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, position FROM users WHERE id=[$session->get(id)]', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, position FROM users WHERE id=[$session->get(id)]')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, position FROM users WHERE id=[$session->get(id)]')
+ 4 APPPATH\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, position FROM users WHERE id=[$session->get(id)]')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-12 09:33:44 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[$session->get(id)]' at line 1 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, po...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, po...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, po...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, po...')
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-01-12 09:33:44 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[$session->get(id)]' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, position FROM users WHERE id=[$session->get(id)]', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, position FROM users WHERE id=[$session->get(id)]')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, position FROM users WHERE id=[$session->get(id)]')
+ 4 APPPATH\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, position FROM users WHERE id=[$session->get(id)]')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-01-12 09:34:19 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[$session[id]]' at line 1 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, po...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, po...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, po...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, po...')
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-01-12 09:34:19 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '[$session[id]]' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, position FROM users WHERE id=[$session[id]]', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, position FROM users WHERE id=[$session[id]]')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, position FROM users WHERE id=[$session[id]]')
+ 4 APPPATH\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, position FROM users WHERE id=[$session[id]]')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

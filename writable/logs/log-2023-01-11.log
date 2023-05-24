@@ -1,0 +1,60 @@
+ERROR - 2023-01-11 08:08:29 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, po...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, po...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, po...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, po...')
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-01-11 08:08:29 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT name, position FROM users WHERE id = ', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT name, position FROM users WHERE id = ')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT name, position FROM users WHERE id = ')
+ 4 APPPATH\Controllers\ProfileController.php(14): CodeIgniter\Database\BaseConnection->query('SELECT name, position FROM users WHERE id = ')
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-11 08:26:00 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::where()
+in APPPATH\Controllers\ProfileController.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-11 08:43:13 --> Undefined variable $data
+in APPPATH\Views\profile.php on line 181.
+ 1 APPPATH\Views\profile.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\profile.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\ProfileController.php(23): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-11 08:44:31 --> Undefined variable $data
+in APPPATH\Views\profile.php on line 181.
+ 1 APPPATH\Views\profile.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\profile.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\ProfileController.php(23): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-11 08:44:34 --> Undefined variable $data
+in APPPATH\Views\profile.php on line 181.
+ 1 APPPATH\Views\profile.php(181): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'APPPATH\\Views\\profile.php', 181)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\ProfileController.php(23): view('/profile', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

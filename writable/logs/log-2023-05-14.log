@@ -1,0 +1,21 @@
+CRITICAL - 2023-05-14 14:12:47 --> Undefined property: App\Controllers\RequestController::$input
+in APPPATH\Controllers\RequestController.php on line 55.
+ 1 APPPATH\Controllers\RequestController.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\RequestController::$input', 'APPPATH\\Controllers\\RequestController.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\RequestController->acceptRequest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RequestController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 14:12:56 --> Undefined property: App\Controllers\RequestController::$input
+in APPPATH\Controllers\RequestController.php on line 55.
+ 1 APPPATH\Controllers\RequestController.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\RequestController::$input', 'APPPATH\\Controllers\\RequestController.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\RequestController->acceptRequest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RequestController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-14 14:31:43 --> Undefined property: App\Controllers\RequestController::$input
+in APPPATH\Controllers\RequestController.php on line 55.
+ 1 APPPATH\Controllers\RequestController.php(55): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\RequestController::$input', 'APPPATH\\Controllers\\RequestController.php', 55)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\RequestController->acceptRequest()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\RequestController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

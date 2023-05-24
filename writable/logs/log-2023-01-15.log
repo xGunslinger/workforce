@@ -1,0 +1,54 @@
+CRITICAL - 2023-01-15 11:03:51 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::set()
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 11:04:29 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::set()
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 11:05:21 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::set()
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 11:05:45 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::set()
+in APPPATH\Controllers\ProfileController.php on line 52.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 11:07:57 --> Undefined constant "App\Controllers\‘Online’"
+in APPPATH\Controllers\ProfileController.php on line 49.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 11:13:33 --> Undefined property: App\Controllers\ProfileController::$database
+in APPPATH\Controllers\ProfileController.php on line 51.
+ 1 APPPATH\Controllers\ProfileController.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ProfileController::$database', 'APPPATH\\Controllers\\ProfileController.php', 51)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 11:15:14 --> Call to undefined method CodeIgniter\Database\MySQLi\Connection::where()
+in APPPATH\Controllers\ProfileController.php on line 51.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-01-15 11:21:45 --> Undefined variable $row
+in APPPATH\Views\profile.php on line 182.
+ 1 APPPATH\Views\profile.php(182): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $row', 'APPPATH\\Views\\profile.php', 182)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\profile.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/profile', [], true)
+ 5 APPPATH\Controllers\ProfileController.php(48): view('/profile')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()

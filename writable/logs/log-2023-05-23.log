@@ -1,0 +1,503 @@
+CRITICAL - 2023-05-23 06:47:56 --> Undefined property: App\Controllers\ScheduleController::$load
+in APPPATH\Controllers\ScheduleController.php on line 8.
+ 1 APPPATH\Controllers\ScheduleController.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ScheduleController::$load', 'APPPATH\\Controllers\\ScheduleController.php', 8)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ScheduleController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScheduleController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 06:48:06 --> Undefined property: App\Controllers\ScheduleController::$load
+in APPPATH\Controllers\ScheduleController.php on line 8.
+ 1 APPPATH\Controllers\ScheduleController.php(8): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\ScheduleController::$load', 'APPPATH\\Controllers\\ScheduleController.php', 8)
+ 2 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ScheduleController->index()
+ 3 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScheduleController))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 06:49:03 --> Undefined property: CodeIgniter\View\View::$calendar
+in APPPATH\Views\schedule.php on line 15.
+ 1 APPPATH\Views\schedule.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: CodeIgniter\\View\\View::$calendar', 'APPPATH\\Views\\schedule.php', 15)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\schedule.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('schedule', [], true)
+ 5 APPPATH\Controllers\ScheduleController.php(8): view('schedule')
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ScheduleController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ScheduleController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:38:28 --> mysqli_sql_exception: Unknown column 'ended_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(41): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:38:28 --> Unknown column 'ended_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(41): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, ended_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:39:33 --> mysqli_sql_exception: Unknown column 'started_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:39:33 --> Unknown column 'started_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, started_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:39:36 --> mysqli_sql_exception: Unknown column 'ended_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(42): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:39:36 --> Unknown column 'ended_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(42): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, ended_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:41:59 --> mysqli_sql_exception: Unknown column 'started_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:41:59 --> Unknown column 'started_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, started_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:42:29 --> mysqli_sql_exception: Unknown column 'started_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:42:29 --> Unknown column 'started_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, started_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:42:31 --> mysqli_sql_exception: Unknown column 'started_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:42:31 --> Unknown column 'started_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, started_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:42:34 --> mysqli_sql_exception: Unknown column 'started_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:42:34 --> Unknown column 'started_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', started_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(28): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, started_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 07:42:38 --> mysqli_sql_exception: Unknown column 'ended_at' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(42): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 07:42:38 --> Unknown column 'ended_at' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Offline\', ended_at = Now() WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(42): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, ended_at = Now() WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->offline()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 07:56:36 --> Array to string conversion
+in APPPATH\Views\working_hours.php on line 145.
+ 1 APPPATH\Views\working_hours.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\working_hours.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 07:59:10 --> Array to string conversion
+in APPPATH\Views\working_hours.php on line 145.
+ 1 APPPATH\Views\working_hours.php(145): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Array to string conversion', 'APPPATH\\Views\\working_hours.php', 145)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 07:59:37 --> Call to undefined function currenttime()
+in APPPATH\Views\working_hours.php on line 145.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 4 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 08:12:46 --> Undefined constant "Europe"
+in APPPATH\Views\working_hours.php on line 145.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 4 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 08:13:27 --> Undefined constant "App\Controllers\Europe"
+in APPPATH\Controllers\WorkingHoursController.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 08:14:12 --> Undefined constant "App\Controllers\local"
+in APPPATH\Controllers\WorkingHoursController.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 08:14:19 --> Undefined constant "App\Controllers\Europe"
+in APPPATH\Controllers\WorkingHoursController.php on line 10.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 08:15:00 --> Undefined constant "App\Controllers\Europe"
+in APPPATH\Controllers\WorkingHoursController.php on line 11.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:28:12 --> localtime(): Argument #1 ($timestamp) must be of type ?int, string given
+in APPPATH\Views\working_hours.php on line 145.
+ 1 APPPATH\Views\working_hours.php(145): localtime('H:i:s')
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 15:30:12 --> mysqli_sql_exception: Unknown column '$currenttime' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(30): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 15:30:12 --> Unknown column '$currenttime' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', start_at=$currenttime WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', start_at=$currenttime WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', start_at=$currenttime WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(30): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, start_at=$currenttime WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 15:35:56 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND start_at=? AND per_hour_rate=?' at line 1 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\WorkingHoursController.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 15:35:56 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '? AND start_at=? AND per_hour_rate=?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM users WHERE id=? AND start_at=? AND per_hour_rate=?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users WHERE id=? AND start_at=? AND per_hour_rate=?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users WHERE id=? AND start_at=? AND per_hour_rate=?')
+ 4 APPPATH\Controllers\WorkingHoursController.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users WHERE id=? AND start_at=? AND per_hour_rate=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:36:11 --> Attempt to read property "name" on null
+in APPPATH\Views\working_hours.php on line 144.
+ 1 APPPATH\Views\working_hours.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'APPPATH\\Views\\working_hours.php', 144)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:36:13 --> Attempt to read property "name" on null
+in APPPATH\Views\working_hours.php on line 144.
+ 1 APPPATH\Views\working_hours.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'APPPATH\\Views\\working_hours.php', 144)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 15:37:15 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1 in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM u...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM u...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM u...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\WorkingHoursController.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM u...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 15:37:15 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '?' at line 1
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT * FROM users WHERE id=?', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('SELECT * FROM users WHERE id=?')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT * FROM users WHERE id=?')
+ 4 APPPATH\Controllers\WorkingHoursController.php(16): CodeIgniter\Database\BaseConnection->query('SELECT * FROM users WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:39:42 --> Attempt to read property "name" on null
+in APPPATH\Views\working_hours.php on line 144.
+ 1 APPPATH\Views\working_hours.php(144): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'APPPATH\\Views\\working_hours.php', 144)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:49:58 --> Undefined variable $checked
+in APPPATH\Views\working_hours.php on line 149.
+ 1 APPPATH\Views\working_hours.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $checked', 'APPPATH\\Views\\working_hours.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:50:07 --> Call to undefined function mdate()
+in APPPATH\Views\working_hours.php on line 147.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 4 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:50:09 --> Call to undefined function mdate()
+in APPPATH\Views\working_hours.php on line 147.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 4 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:50:28 --> Undefined variable $checked
+in APPPATH\Views\working_hours.php on line 149.
+ 1 APPPATH\Views\working_hours.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $checked', 'APPPATH\\Views\\working_hours.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:50:42 --> Undefined variable $checked
+in APPPATH\Views\working_hours.php on line 149.
+ 1 APPPATH\Views\working_hours.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $checked', 'APPPATH\\Views\\working_hours.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:51:34 --> Call to undefined function mdate()
+in APPPATH\Views\working_hours.php on line 147.
+ 1 SYSTEMPATH\View\View.php(213): include()
+ 2 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 3 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 4 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 15:53:16 --> syntax error, unexpected token "endforeach", expecting end of file
+in APPPATH\Views\working_hours.php on line 158.
+ 1 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 2 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 3 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 16:22:16 --> mysqli_sql_exception: Unknown column '$curr' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(31): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 16:22:16 --> Unknown column '$curr' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', start_at=$curr WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', start_at=$curr WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', start_at=$curr WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(31): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, start_at=$curr WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-05-23 16:24:11 --> mysqli_sql_exception: Unknown column '$curr' in 'field list' in D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php:292
+Stack trace:
+#0 D:\Program Files\xampp\htdocs\workforce\system\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SE...', 0)
+#1 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SE...')
+#2 D:\Program Files\xampp\htdocs\workforce\system\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SE...')
+#3 D:\Program Files\xampp\htdocs\workforce\app\Controllers\ProfileController.php(31): CodeIgniter\Database\BaseConnection->query('UPDATE users SE...', Array)
+#4 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+#5 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+#6 D:\Program Files\xampp\htdocs\workforce\system\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 D:\Program Files\xampp\htdocs\workforce\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 {main}
+CRITICAL - 2023-05-23 16:24:11 --> Unknown column '$curr' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('UPDATE users SET status = \'Online\', start_at=$curr WHERE id=\'6\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(666): CodeIgniter\Database\MySQLi\Connection->execute('UPDATE users SET status = \'Online\', start_at=$curr WHERE id=\'6\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(593): CodeIgniter\Database\BaseConnection->simpleQuery('UPDATE users SET status = \'Online\', start_at=$curr WHERE id=\'6\'')
+ 4 APPPATH\Controllers\ProfileController.php(31): CodeIgniter\Database\BaseConnection->query('UPDATE users SET status = ?, start_at=$curr WHERE id=?', [...])
+ 5 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 6 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 7 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 16:26:32 --> Call to undefined function App\Controllers\getResult()
+in APPPATH\Controllers\ProfileController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 16:27:01 --> Call to undefined function App\Controllers\getVar()
+in APPPATH\Controllers\ProfileController.php on line 29.
+ 1 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\ProfileController->online()
+ 2 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\ProfileController))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-05-23 20:32:05 --> Attempt to read property "name" on null
+in APPPATH\Views\working_hours.php on line 149.
+ 1 APPPATH\Views\working_hours.php(149): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Attempt to read property "name" on null', 'APPPATH\\Views\\working_hours.php', 149)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\working_hours.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1134): CodeIgniter\View\View->render('/working_hours', [], true)
+ 5 APPPATH\Controllers\WorkingHoursController.php(21): view('/working_hours', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(927): App\Controllers\WorkingHoursController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(482): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\WorkingHoursController))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
