@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <title>Workforce</title>
 
     <!--    /*********************************************************/-->
@@ -143,30 +143,49 @@
 <!--    CONTENT -->
 <section>
     <div class="container">
+
+        <h2>Working Hours</h2>
+        <p><?php echo $row->name;?> starts day at <?php echo $row->start_at;?></p>
+        <p>Your per hour rate is <?php echo $row->per_hour_rate;?></p>
+
         <div class="row">
             <div class="col-6">
-                <h2>Working Hours</h2>
-                <p><?php echo $row->name;?> starts day at <?php echo $row->start_at;?></p>
-                <p><?php echo  date('H:i:s',time());?></p>
-                <p>Your per hour rate is <?php echo $row->per_hour_rate;?></p>
-                <div class="mb-3">
-                        <div class="rounded-3 mb-1">
-                            <a class="list-group-item list-group-item-action">
-                                <div class="d-flex justify-content-between">
-                                    <h5 class="mb-1">Today is <?php echo date('d/m/y');?></h5>
-                                </div>
-<!--                                ДОБАВИТЬ ПОДСЧЕТ ВРМЕНИ И ЗАРПЛАТЫ-->
-                                <p class="mb-1">Online: ...hours</p>
-                                <p class="mb-1">Break: ...mins</p>
-                                <p class="mb-1">Earned: ...$</p>
-<!--                                <p class="mb-1">--><?php //echo $row->description;?><!--</p>-->
-<!--                                <p class="mb-1">--><?php //echo $row->description;?><!--</p>-->
-<!--                                <p class="mb-1">--><?php //echo $row->description;?><!--</p>-->
-                            </a>
-                        </div>
+                <div class="mb-3 ">
+                    <div class="rounded-3 mb-1">
+                        <a class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1">Today is <?php echo date('d/m/y');?></h5>
+                            </div>
+                            <p class="mb-1">Online time: <?php echo $row->working_hours;?> </p>
+                            <p class="mb-1">Earned: <?php echo (date('H', strtotime($row->working_hours)))*($row->per_hour_rate);?> $</p>
+                        </a>
+                    </div>
                 </div>
             </div>
-
+            <div class="col-6">
+                <div class="mb-3">
+                    <div class="rounded-3 mb-1">
+                        <a class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1">Weekly report</h5>
+                                <small>Work in progress...</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <div class="rounded-3 mb-1">
+                        <a class="list-group-item list-group-item-action">
+                            <div class="d-flex justify-content-between">
+                                <h5 class="mb-1">Montly report</h5>
+                                <small>Work in progress...</small>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </section>
 
 <header>

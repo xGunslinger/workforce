@@ -11,14 +11,13 @@ class WorkingHoursController extends Controller{
         $session = session();
         $database = Database::connect();
 
-        // show username
+        // get data from the db
         $sql = 'SELECT * FROM users WHERE id=?';
         $query = $database->query($sql, [$session->get('id')]);
         $row = $query->getRow();
 
-        // get it and pass to view page
+        // pass to view page
         $userdata["row"] = $row;
         echo view('/working_hours', $userdata);
-
     }
 }
